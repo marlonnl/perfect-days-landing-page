@@ -1,3 +1,5 @@
+@use 'vars';
+@use 'hero';
 
 @font-face {
     font-family: Granville;
@@ -5,11 +7,50 @@
     src: url('../../assets/fonts/fonnts.com-Granville.otf');
 }
 
-body {
-    background-color: coral;
+@font-face {
+    font-family: Granville;
+    font-weight: 800;
+    src: url('../../assets/fonts/fonnts.com-Granville_Bold.otf');
 }
 
-h1 {
+@font-face {
+    font-family: Granville;
+    font-weight: 300;
+    src: url('../../assets/fonts/fonnts.com-Granville_Light.otf');
+}
+
+@mixin title($fontSize: 40px) {
+    font-size: $fontSize;
+    color: vars.$titleColor;
+    font-weight: 700;
+}
+
+@mixin text($fontSize: 22px) {
+    font-size: $fontSize;
+    color: vars.$textColor;
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: Granville, sans-serif;
-    font-size: 88px;
+}
+
+.title--lg {
+    @include title(48px);
+    text-transform: uppercase;
+}
+
+.title {
+    @include title;
+}
+
+.title--sm {
+    @include title(32px);
+}
+
+.text {
+    @include text(18px);
 }
