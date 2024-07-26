@@ -78,6 +78,24 @@ body {
     letter-spacing: 0.25em;
 }
 
+.text--tag {
+    display: inline-block;
+    font-size: 0.75em;
+    padding: 8px;
+    border: 1px solid vars.$titleColor;
+    color: vars.$textColor;
+    border-radius: 8px;
+
+    &::before {
+        content: '#';
+    }
+}
+
+.text--right {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 h1 {
     color: vars.$textColor;

@@ -10,8 +10,7 @@
     &__content {
 
         &__logo {
-            // width: 680px;
-            // background-color: rgba(0,0,0,0.2);
+            padding-bottom: 8.5em;
             
             .title--lg {
                 font-size: 4em;
@@ -22,6 +21,29 @@
                     
             .text {
                 line-height: 28px;
+            }
+        }
+
+        &__ratings {
+
+            &__rating {
+                
+                .text--lg {
+                    display: inline;
+                    vertical-align: top;
+                }
+
+                img {
+                    height: 30px;
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .text--tag {
+
+            &::before {
+                content: '';
             }
         }
     }

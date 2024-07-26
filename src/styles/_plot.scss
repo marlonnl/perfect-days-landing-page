@@ -21,19 +21,6 @@
             justify-content: space-between;
 
             margin-bottom: 48px;
-
-            .text--tag {
-                display: inline-block;
-                font-size: 0.75em;
-                padding: 8px;
-                border: 1px solid vars.$titleColor;
-                color: vars.$textColor;
-                border-radius: 8px;
-
-                &::before {
-                    content: '#';
-                }
-            }
         }
     }
 }
