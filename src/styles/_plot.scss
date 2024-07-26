@@ -1,0 +1,39 @@
+@use 'vars';
+
+.plot {
+    padding: 4vw 5.5vw;
+
+    &__contents {
+        display: flex;
+        justify-content: space-between;
+
+        &__image {
+            padding-right: 24px;
+
+            img {
+                max-width: 55vw;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            margin-bottom: 48px;
+
+            .text--tag {
+                display: inline-block;
+                font-size: 0.75em;
+                padding: 8px;
+                border: 1px solid vars.$titleColor;
+                color: vars.$textColor;
+                border-radius: 8px;
+
+                &::before {
+                    content: '#';
+                }
+            }
+        }
+    }
+}

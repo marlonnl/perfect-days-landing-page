@@ -1,5 +1,6 @@
 @use 'vars';
 @use 'hero';
+@use 'plot';
 
 @font-face {
     font-family: Granville;
@@ -23,9 +24,11 @@
     font-size: $fontSize;
     color: vars.$titleColor;
     font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 24px;
 }
 
-@mixin text($fontSize: 22px) {
+@mixin text($fontSize: 18px) {
     font-size: $fontSize;
     color: vars.$textColor;
     font-weight: normal;
@@ -37,6 +40,11 @@
     padding: 0;
     font-family: Granville, sans-serif;
     font-size: 24px;
+    list-style: none;
+}
+
+body {
+    background-color: vars.$bgColor;
 }
 
 .title--lg {
@@ -53,7 +61,15 @@
 }
 
 .text {
-    @include text(18px);
+    @include text;
+}
+
+.text--lg {
+    @include text(24px);
+}
+
+.text--sm {
+    @include text(14px);
 }
 
 .text--accent {
