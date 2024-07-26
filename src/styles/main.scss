@@ -36,6 +36,7 @@
     margin: 0;
     padding: 0;
     font-family: Granville, sans-serif;
+    font-size: 24px;
 }
 
 .title--lg {
@@ -53,4 +54,15 @@
 
 .text {
     @include text(18px);
+}
+
+.text--accent {
+    margin-left: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+
+h1 {
+    color: vars.$textColor;
 }

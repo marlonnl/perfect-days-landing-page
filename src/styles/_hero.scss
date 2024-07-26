@@ -1,4 +1,25 @@
 .hero {
-    background-image: url(../images/perfect-days-still-siteweb_800x450-730x412.jpg);
+    background-image: url(../images/banner.jpg);
     background-size: cover;
+    min-height: 100vh;
+
+    padding: 5.5vw;
+
+    &__content {
+
+        &__logo {
+            // width: 680px;
+            // background-color: rgba(0,0,0,0.2);
+            
+            .title--lg {
+                        font-size: 4em;
+                        letter-spacing: 1px;
+                        // margin-bottom: 16px;
+                    }
+        }
+
+        .text {
+            line-height: 28px;
+        }
+    }
 }
