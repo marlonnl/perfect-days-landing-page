@@ -1,0 +1,86 @@
+@use 'vars';
+
+.nominations {
+    padding: 5.5vw;
+
+    background-image: url('../../dist/images/deitado.jpg');
+    background-size: cover;
+
+    h2 {
+        padding-bottom: 48px;
+    }
+
+    &__list {
+
+        &__award {
+            background-color: rgba(vars.$bgColor, .75);
+            padding: 24px 0 24px 24px;
+            cursor: pointer;
+            
+            .title--sm {
+                text-transform: none;
+                margin-bottom: 0;
+                color: vars.$textColor;
+            }
+
+            &--is-open {
+                .nominations__list__award__content {
+                    height: auto;
+                    padding: 24px 24px 0 24px;
+                }
+            
+                .nominations__list__award__name::after {
+                    content: '-';
+                }
+            }
+         
+            &__name {
+                position: relative;
+                display: block;
+
+                &::after {
+                    content: '+';
+                    color: vars.$titleColor;
+                    position: absolute;
+                    top: 0;
+                    right: 24px;
+                    height: 100%;
+
+                    display: flex;
+                    align-items: center;
+                }
+
+            }
+
+            &__content {
+                height: 0;
+                overflow: hidden;
+
+                p {
+                    font-size: 1em;
+                    line-height: 42px;
+                }
+                
+                .nom::after {
+                    content: 'indicado';
+                    font-size: 0.75em;
+                    padding: 0px 1px;
+                    margin-left: 8px;
+                    border-radius: 4px;
+                    background-color: #bbb;
+                    color: vars.$bgColor;
+                }
+                
+                .win::after {
+                    content: 'premiado';
+                    font-size: 0.75em;
+                    padding: 0px 1px;
+                    margin-left: 8px;
+                    border-radius: 4px;
+                    background-color: vars.$titleColor;
+                    color: vars.$textColor;
+                }
+            }
+        }
+    }
+}

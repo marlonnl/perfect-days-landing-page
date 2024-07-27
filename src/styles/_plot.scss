@@ -1,7 +1,7 @@
 @use 'vars';
 
 .plot {
-    padding: 4vw 5.5vw;
+    padding: 5vw 5.5vw;
 
     &__contents {
         display: flex;
@@ -19,8 +19,43 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+                        
+            &__block {
 
-            margin-bottom: 48px;
+
+            }
         }
     }
 }
+
+// .nominations__list {
+//     &__item {
+//         margin-bottom: 8px;
+//         list-style-type: disc;
+//         margin-left: 22px;
+
+//         span {
+//             font-size: 1em;
+//         }
+
+//         .nom::after {
+//             content: 'indicado';
+//             font-size: 0.75em;
+//             padding: 0px 1px;
+//             margin-left: 8px;
+//             border-radius: 4px;
+//             background-color: #bbb;
+//             color: vars.$bgColor;
+//         }
+
+//         .win::after {
+//             content: 'premiado';
+//             font-size: 0.75em;
+//             padding: 0px 1px;
+//             margin-left: 8px;
+//             border-radius: 4px;
+//             background-color: vars.$titleColor;
+//             color: vars.$textColor;
+//         }
+//     }
+// }

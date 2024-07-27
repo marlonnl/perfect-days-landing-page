@@ -1,6 +1,8 @@
 @use 'vars';
 @use 'hero';
 @use 'plot';
+@use 'watch';
+@use 'nominations';
 
 @font-face {
     font-family: Granville;
@@ -92,10 +94,9 @@ body {
 }
 
 .text--right {
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    align: right;
 }
-
 
 h1 {
     color: vars.$textColor;
