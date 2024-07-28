@@ -3,6 +3,7 @@
 @use 'plot';
 @use 'watch';
 @use 'nominations';
+@use 'cast';
 
 @font-face {
     font-family: Granville;
@@ -95,9 +96,13 @@ body {
 
 .text--right {
     display: block;
-    align: right;
+    // align: right;
 }
 
 h1 {
+    color: vars.$textColor;
+}
+
+a {
     color: vars.$textColor;
 }

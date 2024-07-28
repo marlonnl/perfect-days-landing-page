@@ -6,8 +6,12 @@
     background-image: url('../../dist/images/deitado.jpg');
     background-size: cover;
 
-    h2 {
+    p {
         padding-bottom: 48px;
+    }
+
+    a {
+        font-size: 1em;
     }
 
     &__list {
@@ -64,7 +68,7 @@
                 .nom::after {
                     content: 'indicado';
                     font-size: 0.75em;
-                    padding: 0px 1px;
+                    padding: 0px 4px;
                     margin-left: 8px;
                     border-radius: 4px;
                     background-color: #bbb;
@@ -74,7 +78,7 @@
                 .win::after {
                     content: 'premiado';
                     font-size: 0.75em;
-                    padding: 0px 1px;
+                    padding: 0px 4px;
                     margin-left: 8px;
                     border-radius: 4px;
                     background-color: vars.$titleColor;

@@ -1,0 +1,63 @@
+@use 'vars';
+
+.cast {
+    padding: 5.5vw;
+
+    &__tabs {
+        display: flex;
+        
+        &__tab {
+            background: none;
+            border: none;
+            border-bottom: 4px solid transparent;
+            cursor: pointer;
+
+            &:hover:not(.cast__tabs__tab--is-active) {
+                border-bottom: 4px solid vars.$textColor;
+            }
+
+            &--is-active {
+                border-bottom: 4px solid vars.$titleColor;
+            }
+        }
+
+        &__tab:not(:last-child) {
+            margin-right: 32px;
+        }
+    }
+
+    &__contents {
+        padding-top: 48px;
+        display: grid;
+        grid-template-columns: 260px auto;
+        gap: 36px;
+
+        display: none;
+
+        &--is-active {
+            display: grid;
+        }
+
+        &__text {
+
+            &__list {
+                padding-top: 16px;
+
+                &__item {
+                    font-size: .75em;
+                    padding-left: 16px;
+                }
+            }
+
+            strong {
+                text-decoration: underline;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid vars.$textColor;
+        }
+    }
+}
