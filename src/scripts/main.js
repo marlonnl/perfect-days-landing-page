@@ -2,6 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const nominationList = document.querySelectorAll('[data-nomination]');
     const tabButtons = document.querySelectorAll('[data-tab-btn]');
 
+    const headerSection = document.querySelector('.header');
+    const headerHeight = headerSection.clientHeight;
+
+    window.addEventListener('scroll', function() {
+        const headerElement = document.querySelector('.header');
+        const yPosition = window.scrollY;
+        
+        headerElement.classList.toggle('header--is-visible', yPosition > 175);
+    });
+
     for (let i = 0; i < nominationList.length; i++) {
         nominationList[i].addEventListener('click', toggleAward);
     }
