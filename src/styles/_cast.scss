@@ -1,5 +1,10 @@
 @use 'vars';
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
 .cast {
     padding: 5.5vw;
 
@@ -29,23 +34,28 @@
     &__contents {
         padding-top: 48px;
         display: grid;
-        grid-template-columns: 260px auto;
+        grid-template-columns: 260px 60%;
         gap: 36px;
 
         display: none;
-
+        animation: fadeIn 0.3s ease-in-out;
+        
         &--is-active {
             display: grid;
         }
 
         &__text {
-
+            
             &__list {
                 padding-top: 16px;
 
                 &__item {
                     font-size: .75em;
                     padding-left: 16px;
+
+                    &--descricao {
+                        margin-top: 16px;
+                    }
                 }
             }
 
