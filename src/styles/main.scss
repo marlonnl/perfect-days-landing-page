@@ -55,10 +55,18 @@ body {
 .title--lg {
     @include title(48px);
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+        @include title(36px);
+    }
 }
 
 .title {
     @include title;
+
+    @media (max-width: 768px) {
+        @include title(28px);
+    }
 }
 
 .title--sm {
@@ -71,6 +79,10 @@ body {
 
 .text--lg {
     @include text(24px);
+
+    @media (max-width: 768px) {
+        @include text(20px);
+    }
 }
 
 .text--sm {
@@ -81,6 +93,11 @@ body {
     margin-left: 16px;
     text-transform: uppercase;
     letter-spacing: 0.25em;
+
+    @media (max-width: 768px) {
+        display: block;
+        line-height: 2em;
+    }
 }
 
 .text--tag {

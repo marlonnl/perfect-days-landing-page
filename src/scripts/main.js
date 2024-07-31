@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const headerElement = document.querySelector('.header');
         const yPosition = window.scrollY;
         
-        headerElement.classList.toggle('header--is-visible', yPosition > 175);
+        headerElement.classList.toggle('header--is-visible', yPosition > headerHeight);
     });
 
     for (let i = 0; i < nominationList.length; i++) {
